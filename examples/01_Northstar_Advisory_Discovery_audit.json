@@ -1,0 +1,67 @@
+{
+  "meeting_number": "01",
+  "meeting_file": "01_Northstar_Advisory_Discovery.docx",
+  "research_file": "01_research_evidence.md",
+  "status": "ok",
+  "mode": "live",
+  "model": "claude-sonnet-5 (drafted directly inside a Claude Code session following SKILL.md, not via the Anthropic Messages API)",
+  "elapsed_seconds": null,
+  "timestamp": "2026-07-28T00:00:00+00:00",
+  "source_count": 4,
+  "eligible_source_count": 4,
+  "sources": [
+    {
+      "title": "Salesforce \u2014 Agentforce Sales: The 24/7 Digital Workforce that Ends the Sales Grind",
+      "publisher": "Salesforce (first-party vendor news)",
+      "date": "2026 (Spring '26 release cycle; exact day not stated on page)",
+      "url": "https://www.salesforce.com/news/stories/agentforce-sales-announcement/",
+      "relevance_score": 3,
+      "human_review_flag": "Major competitive claim",
+      "meeting_issue_connection": "The board member's specific question \u2014 \"why is Northstar not using an AI agent for prospecting\" \u2014 after seeing an Agentforce demo.",
+      "missing_fields": [],
+      "eligible": true
+    },
+    {
+      "title": "Vantage Point \u2014 HubSpot vs Salesforce: Which CRM Is More AI-Agent Ready in 2026?",
+      "publisher": "Vantage Point (CRM consulting/implementation blog, third-party)",
+      "date": "2026",
+      "url": "https://vantagepoint.io/blog/sf/hubspot-vs-salesforce-ai-agent-ready-2026-comparison",
+      "relevance_score": 3,
+      "human_review_flag": "Major competitive claim",
+      "meeting_issue_connection": "Dana's stated concern about buying \"an expensive add-on before the underlying data is cleaned,\" and the implicit fit question for a 120-person, four-practice consulting firm.",
+      "missing_fields": [],
+      "eligible": true
+    },
+    {
+      "title": "HubSpot Knowledge Base \u2014 Transfer data from other apps using HubSpot Smart Transfer",
+      "publisher": "HubSpot (first-party product documentation)",
+      "date": "Not dated on page (live knowledge-base article, reflects current product state as of access date 2026-07-28)",
+      "url": "https://knowledge.hubspot.com/integrations/transfer-data-from-other-apps-using-hubspot-smart-transfer",
+      "relevance_score": 3,
+      "human_review_flag": "None",
+      "meeting_issue_connection": "Dana's migration-risk concern and the request for \"a practical 90-day migration sequence\"; Northstar's current stack is Pipedrive (BD), Mailchimp (newsletters), Zendesk (support) \u2014 all three named tools are covered.",
+      "missing_fields": [],
+      "eligible": true
+    },
+    {
+      "title": "HubSpot Company News \u2014 HubSpot's Customer Agent and Prospecting Agent: Now you pay when the task is complete",
+      "publisher": "HubSpot (first-party company news)",
+      "date": "Effective April 14, 2026 (per article)",
+      "url": "https://www.hubspot.com/company-news/hubspots-customer-agent-and-prospecting-agent-now-you-pay-when-the-task-is-complete",
+      "relevance_score": 3,
+      "human_review_flag": "Pricing",
+      "meeting_issue_connection": "Dana's explicit reluctance to buy \"an expensive add-on before the underlying data is cleaned.\"",
+      "missing_fields": [],
+      "eligible": true
+    }
+  ],
+  "missing_fields": [],
+  "relevance_failures": [],
+  "human_review_flags": [
+    "Major competitive claim",
+    "Pricing"
+  ],
+  "memo_path": "out/01_Northstar_Advisory_Discovery_memo.md",
+  "error": null,
+  "note": "This audit record and its paired memo were produced by manually applying SKILL.md inside an interactive Claude Code session (the bd-market-memo skill wasn't registered in this session's skill list since it was created mid-session), not by batch_process.py's live mode / Anthropic API call. Source-level fields (count, eligibility, flags) were computed by batch_process.parse_research_evidence(), the same deterministic parser batch_process.py itself uses."
+}

@@ -19,8 +19,14 @@ tests/
   test_plan.md                      # runnable dry-run test plan (no API key needed)
   fixtures/edge_case_vague_notes.md  # meeting notes with no owners/dates/commitments
   fixtures/weak_search_evidence.md   # research evidence where nothing scores 3
+examples/
+  01_Northstar_Advisory_Discovery_memo.md    # one example output memo (Shape 1)
+  01_Northstar_Advisory_Discovery_memo.docx  # same memo as a Word document
+  01_Northstar_Advisory_Discovery_audit.json # its matching audit record
 01_Meeting_Notes/*.docx              # the 8 sample meetings (input)
-03_Live_Research/*_research_evidence.md, stage1_manifest.csv, stage1_signoff.md  # Stage 1 output (input)
+03_Live_Research/*_research_evidence.md, stage1_manifest.csv,
+  stage1_signoff.md, stage1_grasp_brief.md, stage2_grasp_brief.md  # Stage 1 + Stage 2 GRASP briefs (input + reflection)
+VALUE_AND_RISK.md                    # time→$ math, risk/mitigation, 30-day plan
 ```
 
 ## Setup
@@ -82,3 +88,16 @@ See `.claude/skills/bd-market-memo/SKILL.md` for the full rules.
 ## Testing
 
 See [tests/test_plan.md](tests/test_plan.md) for a complete, runnable test plan covering normal meetings, the vague-notes edge case, and the weak-search-evidence failure case — all runnable in dry-run mode with no API key.
+
+## Example output
+
+[examples/01_Northstar_Advisory_Discovery_memo.md](examples/01_Northstar_Advisory_Discovery_memo.md) (also provided as a `.docx`) is a full Shape 1 memo for meeting 01, with its matching [audit JSON](examples/01_Northstar_Advisory_Discovery_audit.json). Its `note` field discloses how it was produced — see [03_Live_Research/stage2_grasp_brief.md](03_Live_Research/stage2_grasp_brief.md) for the full account.
+
+## Value, risk, and rollout
+
+See [VALUE_AND_RISK.md](VALUE_AND_RISK.md) for the time→$ savings estimate, the four concrete risks this pipeline's rules are designed to mitigate, and a 30-day adoption plan.
+
+## GRASP briefs
+
+- [03_Live_Research/stage1_grasp_brief.md](03_Live_Research/stage1_grasp_brief.md) — Stage 1 (live research and evidence scoring)
+- [03_Live_Research/stage2_grasp_brief.md](03_Live_Research/stage2_grasp_brief.md) — Stage 2 (this project: skill, batch pipeline, validation)
