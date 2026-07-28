@@ -24,9 +24,10 @@ examples/
   01_Northstar_Advisory_Discovery_memo.docx  # same memo as a Word document
   01_Northstar_Advisory_Discovery_audit.json # its matching audit record
 01_Meeting_Notes/*.docx              # the 8 sample meetings (input)
-03_Live_Research/*_research_evidence.md, stage1_manifest.csv,
-  stage1_signoff.md, stage1_grasp_brief.md, stage2_grasp_brief.md  # Stage 1 + Stage 2 GRASP briefs (input + reflection)
+03_Live_Research/*_research_evidence.md, stage1_manifest.csv, stage1_signoff.md  # Stage 1 output (input)
 VALUE_AND_RISK.md                    # time→$ math, risk/mitigation, 30-day plan
+stage1_grasp_brief.md                # Stage 1 GRASP brief (live research and evidence scoring)
+stage2_grasp_brief.md                # Stage 2 GRASP brief (this project: skill, batch pipeline, validation)
 ```
 
 ## Setup
@@ -91,7 +92,7 @@ See [tests/test_plan.md](tests/test_plan.md) for a complete, runnable test plan 
 
 ## Example output
 
-[examples/01_Northstar_Advisory_Discovery_memo.md](examples/01_Northstar_Advisory_Discovery_memo.md) (also provided as a `.docx`) is a full Shape 1 memo for meeting 01, with its matching [audit JSON](examples/01_Northstar_Advisory_Discovery_audit.json). Its `note` field discloses how it was produced — see [03_Live_Research/stage2_grasp_brief.md](03_Live_Research/stage2_grasp_brief.md) for the full account.
+[examples/01_Northstar_Advisory_Discovery_memo.md](examples/01_Northstar_Advisory_Discovery_memo.md) (also provided as a `.docx`) is a full Shape 1 memo for meeting 01, with its matching [audit JSON](examples/01_Northstar_Advisory_Discovery_audit.json). Its `note` field discloses how it was produced — see [stage2_grasp_brief.md](stage2_grasp_brief.md) for the full account.
 
 ## Value, risk, and rollout
 
@@ -99,5 +100,5 @@ See [VALUE_AND_RISK.md](VALUE_AND_RISK.md) for the time→$ savings estimate, th
 
 ## GRASP briefs
 
-- [03_Live_Research/stage1_grasp_brief.md](03_Live_Research/stage1_grasp_brief.md) — Stage 1 (live research and evidence scoring)
-- [03_Live_Research/stage2_grasp_brief.md](03_Live_Research/stage2_grasp_brief.md) — Stage 2 (this project: skill, batch pipeline, validation)
+- [stage1_grasp_brief.md](stage1_grasp_brief.md) — Stage 1 (live research and evidence scoring)
+- [stage2_grasp_brief.md](stage2_grasp_brief.md) — Stage 2 (this project: skill, batch pipeline, validation)
