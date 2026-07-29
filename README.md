@@ -17,12 +17,14 @@ scripts/
   validate_outputs.py                # checks schema compliance, produces a CSV summary
 tests/
   test_plan.md                      # runnable dry-run test plan (no API key needed)
+  validation_note.md                # write-up of two tests actually run against the Skill
   fixtures/edge_case_vague_notes.md  # meeting notes with no owners/dates/commitments
   fixtures/weak_search_evidence.md   # research evidence where nothing scores 3
 examples/
-  01_Northstar_Advisory_Discovery_memo.md    # one example output memo (Shape 1)
-  01_Northstar_Advisory_Discovery_memo.docx  # same memo as a Word document
-  01_Northstar_Advisory_Discovery_audit.json # its matching audit record
+  01_Northstar_Advisory_Discovery_memo.md            # example output memo (Shape 1)
+  01_Northstar_Advisory_Discovery_memo.docx          # same memo as a Word document
+  01_Northstar_Advisory_Discovery_audit.json         # its matching audit record
+  02_Meridian_Staffing_Competitive_Evaluation_memo.md # second example output memo (Shape 1)
 01_Meeting_Notes/*.docx              # the 8 sample meetings (input)
 03_Live_Research/*_research_evidence.md, stage1_manifest.csv, stage1_signoff.md  # Stage 1 output (input)
 VALUE_AND_RISK.md                    # time→$ math, risk/mitigation, 30-day plan
@@ -90,9 +92,13 @@ See `.claude/skills/bd-market-memo/SKILL.md` for the full rules.
 
 See [tests/test_plan.md](tests/test_plan.md) for a complete, runnable test plan covering normal meetings, the vague-notes edge case, and the weak-search-evidence failure case — all runnable in dry-run mode with no API key.
 
+See [tests/validation_note.md](tests/validation_note.md) for two tests actually executed against the Skill: the vague-notes edge case (which exposed a real gap between dry-run's mechanical `ok` status and the live-drafting step's semantic check, when the fixture was deliberately paired with a different meeting's research file) and a live search-refinement comparison for Meridian's role-governance question.
+
 ## Example output
 
 [examples/01_Northstar_Advisory_Discovery_memo.md](examples/01_Northstar_Advisory_Discovery_memo.md) (also provided as a `.docx`) is a full Shape 1 memo for meeting 01, with its matching [audit JSON](examples/01_Northstar_Advisory_Discovery_audit.json). Its `note` field discloses how it was produced — see [stage2_grasp_brief.md](stage2_grasp_brief.md) for the full account.
+
+[examples/02_Meridian_Staffing_Competitive_Evaluation_memo.md](examples/02_Meridian_Staffing_Competitive_Evaluation_memo.md) is a second full Shape 1 memo, for meeting 02, drafted the same way (directly inside a Claude Code session following `SKILL.md`).
 
 ## Value, risk, and rollout
 
