@@ -26,6 +26,7 @@ examples/
   01_Northstar_Advisory_Discovery_audit.json         # its matching audit record
   02_Meridian_Staffing_Competitive_Evaluation_memo.md # second example output memo (Shape 1)
 01_Meeting_Notes/*.docx              # the 8 sample meetings (input)
+02_Query_Plans/meeting_signal_inventory.md  # per-meeting search-term brainstorm (weak prompt -> sharpened query, and why)
 03_Live_Research/*_research_evidence.md, stage1_manifest.csv, stage1_signoff.md  # Stage 1 output (input)
 VALUE_AND_RISK.md                    # time→$ math, risk/mitigation, 30-day plan
 stage1_grasp_brief.md                # Stage 1 GRASP brief (live research and evidence scoring)
@@ -108,3 +109,7 @@ See [VALUE_AND_RISK.md](VALUE_AND_RISK.md) for the time→$ savings estimate, th
 
 - [stage1_grasp_brief.md](stage1_grasp_brief.md) — Stage 1 (live research and evidence scoring)
 - [stage2_grasp_brief.md](stage2_grasp_brief.md) — Stage 2 (this project: skill, batch pipeline, validation)
+
+## Query plan
+
+[02_Query_Plans/meeting_signal_inventory.md](02_Query_Plans/meeting_signal_inventory.md) makes the search-term brainstorm visible: for each of the 8 meetings, the specific signal in the notes (a competitor named, a product asked about, a pain point raised), the weak/generic query someone might default to, and the sharpened query actually used in that meeting's `03_Live_Research/NN_research_evidence.md` file — plus why the sharpening mattered.

@@ -1,6 +1,6 @@
 # Stage 1 GRASP Brief — Live Research & Evidence Scoring
 
-**Stage:** Query-plan approval → live web search → source scoring → audit (this document covers the live-research + audit portion of Stage 1, run after the meeting-signal inventory and query plan were already approved).
+**Stage:** Query-plan approval → live web search → source scoring → audit (this document covers the live-research + audit portion of Stage 1, run after the meeting-signal inventory and query plan — see [`02_Query_Plans/meeting_signal_inventory.md`](02_Query_Plans/meeting_signal_inventory.md) — were already approved).
 
 ## Goal
 

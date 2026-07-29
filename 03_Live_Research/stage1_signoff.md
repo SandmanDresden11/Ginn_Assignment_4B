@@ -1,7 +1,7 @@
 # Stage 1 Audit & Sign-Off
 
 **Audit date:** 2026-07-28
-**Scope:** `02_Query_Plans/meeting_signal_inventory.docx`, the eight `03_Live_Research/NN_research_evidence.md` files, `03_Live_Research/rejected_results.md`, and the new `03_Live_Research/stage1_manifest.csv`.
+**Scope:** `02_Query_Plans/meeting_signal_inventory.md`, the eight `03_Live_Research/NN_research_evidence.md` files, `03_Live_Research/rejected_results.md`, and the new `03_Live_Research/stage1_manifest.csv`.
 **Purpose:** Verify Stage 1 is complete and accurate before handoff to Claude Code for Stage 2 (final memo drafting). **No final memos were generated as part of this audit.**
 
 Classroom simulation reminder: HubSpot is the only real organization referenced anywhere in this folder. Northstar, Meridian, Harborline, SummitWorks, BrightPath, BluePeak, NABC, and Finley Growth Capital, along with every person, budget, and commercial detail attached to them, are invented for this exercise.
