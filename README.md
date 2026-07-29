@@ -4,9 +4,21 @@ This project turns two upstream inputs — a **BD meeting's notes** and **indepe
 
 This is "Stage 2" of a two-stage pipeline. Stage 1 (already complete, see `03_Live_Research/stage1_signoff.md`) gathered and audited web-search evidence per meeting, scored each candidate source's relevance, and flagged sensitive categories. This project consumes that Stage 1 output — it does not re-run web research.
 
+## Problem & success metric
+
+**Problem:** after a BD meeting, someone has to re-read the notes, cross-reference whatever market/competitive research applies, and turn that into a memo that separates what was actually said from what's inferred from research, flags anything sensitive (pricing, security, legal, competitive claims), and never invents a missing owner or date on a follow-up. Done by hand, this is slow (see the before/after estimate in [tests/test_plan.md](tests/test_plan.md)) and inconsistent — different people apply "is this follow-up complete" and "is this source actually relevant" differently from memo to memo.
+
+**Success metric (primary — speed):** drafting time per memo. Manual baseline ≈ 70–105 min (re-reading notes, cross-referencing research, structuring fact/inference/recommendation, applying the flag policy by hand); with this pipeline ≈ 11–18 min (mostly the unavoidable human-review step, which is deliberately *not* automated). Measured and tabulated in [tests/test_plan.md](tests/test_plan.md); translated to dollars in [VALUE_AND_RISK.md](VALUE_AND_RISK.md).
+
+**Success metric (secondary — correctness):** 100% of generated memos pass `scripts/validate_outputs.py` — every recommended action has an owner+timeline or an explicit `TBD` (never a guess), and every claim marked eligible carries a URL and a score-3 relevance label. Speed without this second metric would be worthless — a fast memo that invents a date or cites weak evidence as settled fact is worse than no memo. Both metrics are checked in [tests/validation_note.md](tests/validation_note.md).
+
+![Pipeline diagram: meeting notes and research evidence flow through batch_process.py, the Rule B relevance gate, the Skill's live drafting, and Section 6 human review before any external use](assets/pipeline_diagram.svg)
+
 ## Project structure
 
 ```
+assets/
+  pipeline_diagram.svg              # workflow diagram: notes+research -> gate -> drafting -> human sign-off
 .claude/skills/bd-market-memo/
   SKILL.md                          # trigger conditions, judgment rules, prohibited actions
   references/output-schema.md       # required memo section structure (2 shapes)

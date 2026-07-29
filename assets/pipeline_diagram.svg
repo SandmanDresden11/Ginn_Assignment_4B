@@ -1,0 +1,95 @@
+<svg viewBox="0 0 1340 660" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1340" height="660" fill="#ffffff"/>
+
+  <text x="670" y="28" text-anchor="middle" font-size="20" font-weight="700" fill="#111827">bd-market-memo: meeting notes + research → drafted memo → human sign-off</text>
+  <text x="670" y="48" text-anchor="middle" font-size="12" fill="#6b7280">Stage 1 (live research, already complete) → Stage 2 (Skill + batch pipeline, this repo) → human review (never automated)</text>
+
+  <text x="170" y="80" text-anchor="middle" font-size="12" font-weight="700" fill="#2563eb">STAGE 1 — LIVE RESEARCH (COMPLETE)</text>
+  <text x="720" y="80" text-anchor="middle" font-size="12" font-weight="700" fill="#7c3aed">STAGE 2 — SKILL + BATCH PIPELINE (THIS REPO)</text>
+  <text x="1195" y="80" text-anchor="middle" font-size="12" font-weight="700" fill="#ea580c">HUMAN — ALWAYS REQUIRED BEFORE EXTERNAL USE</text>
+
+  <!-- Column 1: Stage 1 -->
+  <rect x="40" y="95" width="260" height="60" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="170" y="119" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">Meeting Notes</text>
+  <text x="170" y="137" text-anchor="middle" font-size="11" fill="#1e3a8a">01_Meeting_Notes/*.docx (8 meetings)</text>
+
+  <rect x="40" y="190" width="260" height="60" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="170" y="212" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">Search-Term Brainstorm</text>
+  <text x="170" y="228" text-anchor="middle" font-size="11" fill="#1e3a8a">02_Query_Plans — weak prompt →</text>
+  <text x="170" y="242" text-anchor="middle" font-size="11" fill="#1e3a8a">sharpened query, per meeting</text>
+
+  <rect x="40" y="285" width="260" height="60" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="170" y="309" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">Live Web Search</text>
+  <text x="170" y="327" text-anchor="middle" font-size="11" fill="#1e3a8a">scored 0–3, human-review flagged</text>
+
+  <rect x="40" y="380" width="260" height="60" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="170" y="402" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">Research Evidence</text>
+  <text x="170" y="420" text-anchor="middle" font-size="11" fill="#1e3a8a">03_Live_Research/</text>
+  <text x="170" y="434" text-anchor="middle" font-size="11" fill="#1e3a8a">NN_research_evidence.md</text>
+
+  <line x1="170" y1="250" x2="170" y2="285" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="170" y1="345" x2="170" y2="380" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Column 2: Stage 2 orchestration -->
+  <rect x="400" y="205" width="260" height="60" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="530" y="229" text-anchor="middle" font-size="13" font-weight="700" fill="#4c1d95">batch_process.py</text>
+  <text x="530" y="247" text-anchor="middle" font-size="11" fill="#4c1d95">pairs notes + evidence by meeting #</text>
+
+  <rect x="400" y="320" width="260" height="60" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="530" y="344" text-anchor="middle" font-size="13" font-weight="700" fill="#78350f">Rule B relevance gate</text>
+  <text x="530" y="362" text-anchor="middle" font-size="11" fill="#78350f">≥1 score-3 source? (deterministic)</text>
+
+  <line x1="300" y1="125" x2="400" y2="230" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="300" y1="410" x2="400" y2="240" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="530" y1="265" x2="530" y2="320" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Column 3: gate outcomes -->
+  <rect x="760" y="205" width="280" height="60" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="900" y="229" text-anchor="middle" font-size="13" font-weight="700" fill="#7f1d1d">Shape 2 — Insufficient Input</text>
+  <text x="900" y="247" text-anchor="middle" font-size="11" fill="#7f1d1d">memo not drafted; human told what's missing</text>
+
+  <rect x="760" y="320" width="280" height="60" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="900" y="344" text-anchor="middle" font-size="13" font-weight="700" fill="#4c1d95">Skill live drafting (SKILL.md)</text>
+  <text x="900" y="362" text-anchor="middle" font-size="11" fill="#4c1d95">Rule A + Rule B semantic check</text>
+
+  <line x1="660" y1="335" x2="760" y2="240" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="705" y="278" text-anchor="middle" font-size="10" fill="#6b7280">no score-3 source</text>
+
+  <line x1="660" y1="350" x2="760" y2="350" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="710" y="342" text-anchor="middle" font-size="10" fill="#6b7280">≥1 score-3 source</text>
+
+  <rect x="760" y="420" width="280" height="70" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="900" y="444" text-anchor="middle" font-size="13" font-weight="700" fill="#14532d">Shape 1 Memo</text>
+  <text x="900" y="462" text-anchor="middle" font-size="11" fill="#14532d">Fact / Inference / Recommendation,</text>
+  <text x="900" y="476" text-anchor="middle" font-size="11" fill="#14532d">sourced + flagged</text>
+
+  <line x1="900" y1="380" x2="900" y2="420" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Column 4: QC + human -->
+  <rect x="1090" y="320" width="210" height="60" rx="8" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.5"/>
+  <text x="1195" y="344" text-anchor="middle" font-size="13" font-weight="700" fill="#374151">validate_outputs.py</text>
+  <text x="1195" y="362" text-anchor="middle" font-size="11" fill="#374151">schema + completeness QC</text>
+
+  <rect x="1090" y="420" width="210" height="70" rx="8" fill="#ffedd5" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="1195" y="442" text-anchor="middle" font-size="13" font-weight="700" fill="#7c2d12">Section 6</text>
+  <text x="1195" y="459" text-anchor="middle" font-size="11" fill="#7c2d12">Human Review Required</text>
+  <text x="1195" y="474" text-anchor="middle" font-size="11" fill="#7c2d12">owner/timeline TBDs + flagged claims</text>
+
+  <rect x="1090" y="530" width="210" height="70" rx="8" fill="#ccfbf1" stroke="#0d9488" stroke-width="1.5"/>
+  <text x="1195" y="552" text-anchor="middle" font-size="13" font-weight="700" fill="#134e4a">Human sign-off →</text>
+  <text x="1195" y="569" text-anchor="middle" font-size="11" fill="#134e4a">external use / CRM</text>
+  <text x="1195" y="584" text-anchor="middle" font-size="11" fill="#134e4a">(never automated by the Skill)</text>
+
+  <line x1="1040" y1="440" x2="1090" y2="350" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="1060" y="390" text-anchor="middle" font-size="10" fill="#6b7280">audit</text>
+
+  <line x1="1040" y1="455" x2="1090" y2="455" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <line x1="1195" y1="490" x2="1195" y2="530" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>
